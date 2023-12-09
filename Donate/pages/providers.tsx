@@ -3,12 +3,12 @@
 import { RainbowKitProvider, getDefaultWallets } from "@rainbow-me/rainbowkit";
 import { ReactNode } from "react";
 import { WagmiConfig, configureChains, createConfig } from "wagmi";
-import { scrollSepolia } from "@wagmi/core/chains";
+import { polygonZkEvmTestnet } from "@wagmi/core/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [scrollSepolia],
+  [polygonZkEvmTestnet],
   [
     alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID || "" }),
     publicProvider(),

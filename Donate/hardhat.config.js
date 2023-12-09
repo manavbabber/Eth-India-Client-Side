@@ -20,6 +20,12 @@ if (process.env.SCROLL_SEPOLIA_URL_PROVIDER && process.env.SCROLL_SEPOLIA_URL_PR
     accounts: [process.env.SCROLL_PRIVATE_KEY],
   };
 }
+if (process.env.ZK_EVM_POLYGON_URL_PROVIDER && process.env.ZK_EVM_POLYGON_URL_PROVIDER !== "") {
+  config.networks.polygonZkEvmTestnet={
+    url: process.env.ZK_EVM_POLYGON_URL_PROVIDER,
+    accounts: [process.env.PRIVATE_KEY],
+  };
+}
 if (process.env.SEPOLIA_URL_PROVIDER && process.env.SEPOLIA_URL_PROVIDER != "")
   config.networks.sepolia = {
     url: process.env.SEPOLIA_URL_PROVIDER,
